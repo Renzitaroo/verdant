@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant Admin - Dashboard Kelola Orderan</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS (Shares variables & includes admin layout styles) -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-2 px-0 admin-sidebar d-flex flex-column">
+                <div class="p-4 sidebar-heading d-flex align-items-center fw-bold">
+                    <i class="bi bi-leaf-fill text-white me-2 fs-3"></i>
+                    <span>Verdant Admin</span>
+                </div>
+                
+                <ul class="nav flex-column mt-4 flex-grow-1">
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link active">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#orders-section" class="nav-link">
+                            <i class="bi bi-basket-fill"></i>
+                            <span>Daftar Orderan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#chart-section" class="nav-link">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Analisis Tren</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="p-4 mt-auto border-top border-secondary-subtle">
+                    <a href="index.html" class="btn btn-outline-light w-100 rounded-pill d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Lihat Website</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Main Content Area -->
+            <div class="col-lg-10 admin-main">
+                
+                <!-- Top Navbar -->
+                <div class="admin-navbar d-flex align-items-center justify-content-between">
+                    <div class="search-wrapper d-none d-md-flex align-items-center position-relative">
+                        <i class="bi bi-search text-muted position-absolute ms-3"></i>
+                        <input type="text" class="form-control rounded-pill ps-5 border-light-subtle shadow-none bg-light-green" placeholder="Cari email orderan..." id="searchOrderInput">
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="position-relative me-3">
+                            <i class="bi bi-bell-fill fs-5 text-muted cursor-pointer"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" id="notificationBadge"></span>
+                        </div>
+                        <div class="vr text-secondary-subtle"></div>
+                        <div class="profile-info d-flex align-items-center gap-2">
+                            <div class="avatar-placeholder rounded-circle bg-emerald text-white fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                AD
+                            </div>
+                            <div class="d-none d-sm-block">
+                                <h6 class="mb-0 fw-bold text-dark-green text-start">Administrator</h6>
+                                <small class="text-muted">Owner Verdant</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- KPI Widgets Row -->
+                <div class="row g-4 mb-4">
+                    <!-- Total Orders -->
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card admin-card p-4 h-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <h6 class="text-muted mb-1 text-uppercase fw-semibold" style="font-size: 0.8rem;">Total Pre-order</h6>
+                                    <h2 class="fw-extrabold text-dark-green mb-0" id="statTotalOrders">0</h2>
+                                </div>
+                                <div class="bg-emerald-subtle text-emerald rounded-3 p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-cart-check-fill fs-3"></i>
+                                </div>
+                            </div>
+                            <small class="text-emerald fw-semibold"><i class="bi bi-arrow-up-right me-1"></i>+12% Minggu Ini</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Pending Orders -->
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card admin-card p-4 h-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <h6 class="text-muted mb-1 text-uppercase fw-semibold" style="font-size: 0.8rem;">Status Pending</h6>
+                                    <h2 class="fw-extrabold text-warning mb-0" id="statPendingOrders">0</h2>
+                                </div>
+                                <div class="bg-warning-subtle text-warning rounded-3 p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-hourglass-split fs-3"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted">Perlu tindak lanjut segera</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Shipped/Delivered Orders -->
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card admin-card p-4 h-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <h6 class="text-muted mb-1 text-uppercase fw-semibold" style="font-size: 0.8rem;">Selesai (Delivered)</h6>
+                                    <h2 class="fw-extrabold text-success mb-0" id="statDeliveredOrders">0</h2>
+                                </div>
+                                <div class="bg-success-subtle text-success rounded-3 p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-truck fs-3"></i>
+                                </div>
+                            </div>
+                            <small class="text-success fw-semibold"><i class="bi bi-check-circle-fill me-1"></i>Pengiriman sukses</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversion Revenue estimation -->
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card admin-card p-4 h-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <h6 class="text-muted mb-1 text-uppercase fw-semibold" style="font-size: 0.8rem;">Estimasi Potensi Omset</h6>
+                                    <h2 class="fw-extrabold text-dark-green mb-0" id="statEstRevenue">Rp 0M</h2>
+                                </div>
+                                <div class="bg-emerald-subtle text-emerald rounded-3 p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-cash-stack fs-3"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted">Berdasarkan harga Rp 1.5jt/unit</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Analytics Section -->
+                <div class="row g-4 mb-4" id="chart-section">
+                    <!-- Chart Graphic -->
+                    <div class="col-lg-8">
+                        <div class="card admin-card p-4">
+                            <h5 class="fw-bold text-dark-green mb-4">Tren Pendaftaran Pre-order Harian</h5>
+                            <div class="chart-container">
+                                <canvas id="ordersChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Manual order addition & Quick stats -->
+                    <div class="col-lg-4">
+                        <div class="card admin-card p-4 h-100">
+                            <h5 class="fw-bold text-dark-green mb-3">Input Pre-order Manual</h5>
+                            <p class="text-muted small mb-4">
+                                Gunakan form ini untuk menambahkan pendaftaran pre-order baru secara manual untuk testing atau orderan via jalur alternatif.
+                            </p>
+                            
+                            <form id="addManualOrderForm">
+                                <div class="mb-3">
+                                    <label for="manualEmail" class="form-label fw-semibold text-dark-green">Alamat Email</label>
+                                    <input type="email" class="form-control rounded-pill px-3 shadow-none border-light-subtle" id="manualEmail" placeholder="nama@email.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="manualStatus" class="form-label fw-semibold text-dark-green">Status Awal</label>
+                                    <select class="form-select rounded-pill px-3 shadow-none border-light-subtle" id="manualStatus">
+                                        <option value="Pending">Pending</option>
+                                        <option value="Shipped">Shipped (Dikirim)</option>
+                                        <option value="Delivered">Delivered (Selesai)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-emerald w-100 rounded-pill py-2.5 fw-bold shadow-sm">
+                                    <i class="bi bi-plus-circle-fill me-1"></i> Tambah Orderan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Table Section -->
+                <div class="card admin-card p-4" id="orders-section">
+                    <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between mb-4 gap-3">
+                        <div>
+                            <h5 class="fw-bold text-dark-green mb-1">Daftar Pre-order Masuk</h5>
+                            <p class="text-muted small mb-0">Total antrian pemesan produk Verdant Pod</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-danger btn-sm rounded-pill px-3" id="clearAllOrdersBtn">
+                                <i class="bi bi-trash-fill me-1"></i> Kosongkan Data
+                            </button>
+                            <button class="btn btn-outline-emerald btn-sm rounded-pill px-3" id="generateDummyDataBtn">
+                                <i class="bi bi-database-fill-add me-1"></i> Isi Data Contoh
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table admin-table align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 15%;">ID Order</th>
+                                    <th scope="col" style="width: 35%;">Email Pemesan</th>
+                                    <th scope="col" style="width: 20%;">Tanggal Masuk</th>
+                                    <th scope="col" style="width: 15%;">Status</th>
+                                    <th scope="col" style="width: 15%;" class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersTableBody">
+                                <!-- Data diisi oleh admin.js -->
+                                <tr>
+                                    <td colspan="5" class="text-center py-4 text-muted">
+                                        <i class="bi bi-inbox fs-3 d-block mb-2"></i> Belum ada data orderan.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Admin JS -->
+    <script src="admin.js"></script>
+</body>
+</html>
