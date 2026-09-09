@@ -1,0 +1,13 @@
+{
+  "name": "verdant",
+  "version": "1.0.0",
+  "description": "Verdant - Smart Indoor Garden & Premium Eco-Living",
+  "scripts": {
+    "dev": "vite --host --port 5173 --open",
+    "serve": "vite preview",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

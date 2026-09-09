@@ -759,3 +759,660 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
         padding-bottom: 1rem;
     }
 }
+
+
+/* ==========================================================================
+   SUPER VERDANT ENHANCEMENTS: DARK MODE, SIMULATOR, COPILOT, AUDIO, ETC.
+   ========================================================================== */
+
+/* --- DARK / BIOLUMINESCENT MODE --- */
+body.dark-mode {
+    --white: #0c1812;
+    --dark-text: #e2f0e8;
+    --light-green: #11241a;
+    --light-green-subtle: #162f23;
+    --dark-green: #a7f3d0;
+    --muted-text: #94a3b8;
+    background-color: #09130e;
+    color: #e2f0e8;
+}
+
+body.dark-mode .card,
+body.dark-mode .step-card,
+body.dark-mode .feature-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .social-card,
+body.dark-mode .simulator-console,
+body.dark-mode .quiz-card,
+body.dark-mode .bundle-card,
+body.dark-mode .calc-card {
+    background-color: #12241b !important;
+    border-color: rgba(25, 135, 84, 0.25) !important;
+    color: #e2f0e8;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode #mainNav.scrolled {
+    background-color: rgba(9, 19, 14, 0.95);
+    border-bottom: 1px solid rgba(25, 135, 84, 0.3);
+}
+
+body.dark-mode .nav-link {
+    color: #cbd5e1;
+}
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #34d399;
+}
+
+body.dark-mode .hero-section {
+    background: radial-gradient(circle at 80% 20%, #153828 0%, #09130e 70%);
+}
+
+body.dark-mode .text-muted {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: #12241b !important;
+}
+
+body.dark-mode .bg-light-green {
+    background-color: #0e1e16 !important;
+}
+
+body.dark-mode .modal-content {
+    background-color: #12241b;
+    color: #e2f0e8;
+    border: 1px solid rgba(25, 135, 84, 0.3);
+}
+
+/* --- CANVAS ECO-PARTICLES --- */
+#eco-particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- THEME & ZEN AUDIO TOGGLE BUTTONS --- */
+.nav-action-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(25, 135, 84, 0.3);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--primary-emerald);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+body.dark-mode .nav-action-btn {
+    background: rgba(18, 36, 27, 0.85);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.nav-action-btn:hover {
+    transform: scale(1.08);
+    background: var(--primary-emerald);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(25, 135, 84, 0.3);
+}
+
+.nav-action-btn.active {
+    background: var(--primary-emerald);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(25, 135, 84, 0.5);
+}
+
+.zen-playing-waves {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 14px;
+}
+.zen-playing-waves span {
+    width: 2.5px;
+    background-color: currentColor;
+    border-radius: 2px;
+    animation: wave-bar 1s infinite ease-in-out;
+}
+.zen-playing-waves span:nth-child(2) { animation-delay: 0.2s; }
+.zen-playing-waves span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wave-bar {
+    0%, 100% { height: 4px; }
+    50% { height: 14px; }
+}
+
+/* --- VERDANT DIGITAL TWIN (SIMULATOR) --- */
+.simulator-section {
+    position: relative;
+    background: linear-gradient(180deg, #f3faf6 0%, #e8f5ed 100%);
+    overflow: hidden;
+}
+body.dark-mode .simulator-section {
+    background: linear-gradient(180deg, #09130e 0%, #0d1e16 100%);
+}
+
+.simulator-console {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(25, 135, 84, 0.15);
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(10, 54, 34, 0.08);
+    padding: 2.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.sim-device-stage {
+    background: radial-gradient(circle at center 70%, rgba(209, 231, 221, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 24px;
+    height: 420px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: 1px solid rgba(25, 135, 84, 0.1);
+}
+body.dark-mode .sim-device-stage {
+    background: radial-gradient(circle at center 70%, rgba(16, 185, 129, 0.15) 0%, rgba(13, 23, 18, 0) 70%);
+    border-color: rgba(25, 135, 84, 0.25);
+}
+
+/* LED Grow Light Beam */
+.sim-lamp-head {
+    position: absolute;
+    top: 25px;
+    width: 220px;
+    height: 18px;
+    background: #2b3035;
+    border-radius: 9px;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sim-lamp-emitter {
+    width: 190px;
+    height: 6px;
+    border-radius: 3px;
+    background: #fffae0;
+    box-shadow: 0 0 15px #f59e0b;
+    transition: all 0.5s ease;
+}
+
+.sim-light-beam {
+    position: absolute;
+    top: 35px;
+    width: 240px;
+    height: 290px;
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.35) 0%, rgba(245, 158, 11, 0.02) 90%, transparent 100%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+/* Spectrum Beam Themes */
+.sim-light-beam.spectrum-sun {
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.35) 0%, rgba(245, 158, 11, 0.02) 90%, transparent 100%);
+}
+.sim-light-beam.spectrum-veggie {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.05) 90%, transparent 100%);
+}
+.sim-light-beam.spectrum-bloom {
+    background: linear-gradient(180deg, rgba(217, 70, 239, 0.42) 0%, rgba(217, 70, 239, 0.05) 90%, transparent 100%);
+}
+.sim-light-beam.spectrum-night {
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.28) 0%, rgba(16, 185, 129, 0.02) 90%, transparent 100%);
+}
+
+/* Virtual Plant Stage Container */
+.sim-plant-wrapper {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+.sim-plant-svg {
+    filter: drop-shadow(0 8px 16px rgba(10, 54, 34, 0.15));
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Device Pod Base */
+.sim-pod-base {
+    position: absolute;
+    bottom: 20px;
+    width: 250px;
+    height: 75px;
+    background: linear-gradient(180deg, #ffffff 0%, #e9ecef 100%);
+    border-radius: 18px 18px 24px 24px;
+    border: 2px solid rgba(25, 135, 84, 0.2);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+/* Water Level Indicator in Pod Base */
+.sim-water-window {
+    width: 45px;
+    height: 38px;
+    background: rgba(13, 110, 253, 0.1);
+    border: 1.5px solid rgba(13, 110, 253, 0.3);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.sim-water-level-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+    transition: height 0.8s ease;
+}
+
+/* Mist / Spray Particles */
+.sim-mist-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: radial-gradient(circle at center 60%, rgba(147, 197, 253, 0.4) 0%, transparent 60%);
+}
+.sim-mist-overlay.active {
+    opacity: 1;
+    animation: mist-pulse 1.2s ease-out;
+}
+@keyframes mist-pulse {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1.1); }
+}
+
+/* Sensor Gauge Cards */
+.sensor-metric-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(25, 135, 84, 0.15);
+    border-radius: 18px;
+    padding: 1.1rem;
+    transition: var(--transition-smooth);
+}
+body.dark-mode .sensor-metric-card {
+    background: rgba(18, 36, 27, 0.7);
+    border-color: rgba(25, 135, 84, 0.3);
+}
+.sensor-metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.12);
+}
+
+.spectrum-btn {
+    border: 1.5px solid transparent;
+    padding: 0.5rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    background: #f8f9fa;
+    color: #495057;
+}
+body.dark-mode .spectrum-btn {
+    background: #162a20;
+    color: #cbd5e1;
+}
+.spectrum-btn.active {
+    border-color: var(--primary-emerald);
+    background: var(--primary-emerald-subtle);
+    color: var(--primary-emerald);
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+}
+
+/* Plant Mood Tamagotchi Badge */
+.plant-mood-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: rgba(25, 135, 84, 0.12);
+    color: var(--primary-emerald);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+body.dark-mode .plant-mood-badge {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+}
+
+/* --- POD COLOR CUSTOMIZER & BUNDLE BUILDER --- */
+.color-swatch-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, outline 0.2s ease;
+    outline: 2px solid transparent;
+}
+.color-swatch-btn:hover {
+    transform: scale(1.15);
+}
+.color-swatch-btn.active {
+    outline: 2.5px solid var(--primary-emerald);
+    outline-offset: 3px;
+}
+
+.seed-pod-card {
+    border: 1.5px solid rgba(25, 135, 84, 0.15);
+    border-radius: 16px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    background: var(--white);
+    position: relative;
+    user-select: none;
+}
+body.dark-mode .seed-pod-card {
+    background: #14271d;
+    border-color: rgba(25, 135, 84, 0.25);
+}
+.seed-pod-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-emerald);
+    box-shadow: 0 6px 16px rgba(25, 135, 84, 0.15);
+}
+.seed-pod-card.selected {
+    border-color: var(--primary-emerald);
+    background-color: var(--primary-emerald-subtle);
+}
+body.dark-mode .seed-pod-card.selected {
+    background-color: rgba(25, 135, 84, 0.25);
+    border-color: #34d399;
+}
+.seed-checkbox-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: white;
+    transition: var(--transition-smooth);
+}
+.seed-pod-card.selected .seed-checkbox-badge {
+    background: var(--primary-emerald);
+    border-color: var(--primary-emerald);
+}
+
+/* --- PLANT MATCHER WIZARD --- */
+.quiz-option-card {
+    border: 2px solid #e9ecef;
+    border-radius: 16px;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: center;
+    background: white;
+}
+body.dark-mode .quiz-option-card {
+    background: #14271d;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+.quiz-option-card:hover {
+    border-color: var(--primary-emerald);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.12);
+}
+.quiz-option-card.active {
+    border-color: var(--primary-emerald);
+    background: var(--primary-emerald-subtle);
+}
+body.dark-mode .quiz-option-card.active {
+    background: rgba(25, 135, 84, 0.3);
+    border-color: #34d399;
+}
+
+/* --- ECO-ROI SAVINGS CALCULATOR --- */
+.roi-slider {
+    accent-color: var(--primary-emerald);
+    height: 8px;
+    cursor: pointer;
+}
+.roi-result-card {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    border-radius: 20px;
+    padding: 1.8rem;
+}
+
+/* --- VERDANT AI GARDEN COPILOT --- */
+.ai-copilot-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1040;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #198754 0%, #0a3622 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 30px rgba(25, 135, 84, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+.ai-copilot-trigger:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(25, 135, 84, 0.6);
+}
+.ai-trigger-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(25, 135, 84, 0.4);
+    animation: ping-pulse 2s infinite cubic-bezier(0, 0, 0.2, 1);
+    z-index: -1;
+}
+@keyframes ping-pulse {
+    75%, 100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.ai-copilot-box {
+    position: fixed;
+    bottom: 105px;
+    right: 30px;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    height: 540px;
+    max-height: calc(100vh - 130px);
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.dark-mode .ai-copilot-box {
+    background: #112219;
+    border-color: rgba(52, 211, 153, 0.3);
+    color: #e2f0e8;
+}
+.ai-copilot-box.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ai-header {
+    background: linear-gradient(135deg, #0a3622 0%, #198754 100%);
+    color: white;
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ai-messages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scroll-behavior: smooth;
+}
+
+.ai-bubble {
+    max-width: 82%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    word-break: break-word;
+}
+.ai-bubble-bot {
+    background: #f1f8f4;
+    color: #1a382b;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+    border: 1px solid rgba(25, 135, 84, 0.1);
+}
+body.dark-mode .ai-bubble-bot {
+    background: #162e22;
+    color: #e2f0e8;
+    border-color: rgba(52, 211, 153, 0.2);
+}
+.ai-bubble-user {
+    background: var(--primary-emerald);
+    color: white;
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.25);
+}
+
+.ai-chip {
+    background: #e8f5ed;
+    color: #198754;
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+body.dark-mode .ai-chip {
+    background: #183325;
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+.ai-chip:hover {
+    background: var(--primary-emerald);
+    color: white;
+}
+
+.ai-typing {
+    display: inline-flex;
+    gap: 4px;
+    padding: 8px 12px;
+}
+.ai-typing span {
+    width: 6px;
+    height: 6px;
+    background: #198754;
+    border-radius: 50%;
+    animation: typing-bounce 1.2s infinite ease-in-out;
+}
+.ai-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ai-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+}
+
+/* --- LIVE SOCIAL PROOF TICKER --- */
+.live-social-toast {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1030;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 340px;
+    transform: translateX(-120%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.dark-mode .live-social-toast {
+    background: rgba(18, 36, 27, 0.95);
+    border-color: rgba(52, 211, 153, 0.3);
+    color: #e2f0e8;
+}
+.live-social-toast.show {
+    transform: translateX(0);
+}
+
+/* --- DIGITAL RECEIPT SLIP --- */
+.digital-receipt-card {
+    background: #ffffff;
+    border: 2px dashed #198754;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+body.dark-mode .digital-receipt-card {
+    background: #14271d;
+    border-color: #34d399;
+}

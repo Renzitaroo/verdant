@@ -216,21 +216,31 @@
                         </div>
                     </div>
                     
+                    <!-- Filter Tabs -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="btn btn-sm btn-emerald rounded-pill px-3 filter-btn active" data-filter="all">Semua</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="Pending">Pending</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="Shipped">Dikirim</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="Delivered">Selesai</button>
+                    </div>
+
                     <div class="table-responsive">
                         <table class="table admin-table align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col" style="width: 15%;">ID Order</th>
-                                    <th scope="col" style="width: 35%;">Email Pemesan</th>
-                                    <th scope="col" style="width: 20%;">Tanggal Masuk</th>
-                                    <th scope="col" style="width: 15%;">Status</th>
-                                    <th scope="col" style="width: 15%;" class="text-center">Aksi</th>
+                                    <th scope="col" style="width: 12%;">ID Order</th>
+                                    <th scope="col" style="width: 24%;">Pemesan & Kontak</th>
+                                    <th scope="col" style="width: 26%;">Konfigurasi Unit</th>
+                                    <th scope="col" style="width: 12%;">Kota</th>
+                                    <th scope="col" style="width: 12%;">Tanggal</th>
+                                    <th scope="col" style="width: 10%;">Status</th>
+                                    <th scope="col" style="width: 14%;" class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody id="ordersTableBody">
                                 <!-- Data diisi oleh admin.js -->
                                 <tr>
-                                    <td colspan="5" class="text-center py-4 text-muted">
+                                    <td colspan="7" class="text-center py-4 text-muted">
                                         <i class="bi bi-inbox fs-3 d-block mb-2"></i> Belum ada data orderan.
                                     </td>
                                 </tr>
