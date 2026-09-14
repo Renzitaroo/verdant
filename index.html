@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verdant - Smart Indoor Garden & Premium Eco-Living</title>
+    <title>RenziFarm - Smart Indoor Garden & Premium Eco-Living</title>
     
     <!-- Meta SEO -->
-    <meta name="description" content="Verdant adalah solusi kebun pintar dalam ruangan (smart indoor garden) yang estetik, otomatis, dan ramah lingkungan. Tumbuhkan tanaman herbal segar Anda sendiri dengan mudah.">
-    <meta name="keywords" content="smart garden, kebun indoor, tanaman herbal, eco-friendly, verdant pod, kebun otomatis">
-    <meta name="author" content="Verdant Indonesia">
+    <meta name="description" content="Renzifarm adalah solusi kebun pintar dalam ruangan (smart indoor garden) yang estetik, otomatis, dan ramah lingkungan. Tumbuhkan tanaman herbal segar Anda sendiri dengan mudah.">
+    <meta name="keywords" content="smart garden, kebun indoor, tanaman herbal, eco-friendly, renzifarm pod, kebun otomatis">
+    <meta name="author" content="Renzifarm Indonesia">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +29,45 @@
 </head>
 <body>
 
+    <!-- Moving Leaf Silhouettes Background Layer -->
+    <div id="leafSilhouetteContainer" aria-hidden="true">
+        <!-- Leaf 1: Monstera Style -->
+        <svg class="leaf-silhouette leaf-1" viewBox="0 0 100 100">
+            <path d="M50 5 C30 5 10 25 10 50 C10 68 22 84 38 92 L50 98 L62 92 C78 84 90 68 90 50 C90 25 70 5 50 5 Z M48 20 C48 35 40 45 30 50 C42 48 48 38 48 20 Z M52 20 C52 38 58 48 70 50 C60 45 52 35 52 20 Z M46 55 C35 58 25 65 20 72 C30 70 42 65 46 55 Z M54 55 C58 65 70 70 80 72 C75 65 65 58 54 55 Z"/>
+        </svg>
+
+        <!-- Leaf 2: Fern Frond -->
+        <svg class="leaf-silhouette leaf-2" viewBox="0 0 100 120">
+            <path d="M50 10 Q55 30 50 110 M50 25 Q35 15 25 22 M50 35 Q65 25 75 32 M50 48 Q30 38 20 46 M50 60 Q70 50 80 58 M50 72 Q30 65 18 75 M50 85 Q70 78 82 88" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none"/>
+        </svg>
+
+        <!-- Leaf 3: Basil / Mint Leaf -->
+        <svg class="leaf-silhouette leaf-3" viewBox="0 0 100 100">
+            <path d="M50 8 C30 25 20 55 50 92 C80 55 70 25 50 8 Z M50 20 L50 85 M50 35 Q35 45 28 50 M50 48 Q65 58 72 62 M50 62 Q38 70 32 75"/>
+        </svg>
+
+        <!-- Leaf 4: Tropical Eucalyptus -->
+        <svg class="leaf-silhouette leaf-4" viewBox="0 0 80 120">
+            <path d="M40 5 C25 20 20 60 40 115 C60 60 55 20 40 5 Z"/>
+        </svg>
+
+        <!-- Leaf 5: Broad Botanical Leaf -->
+        <svg class="leaf-silhouette leaf-5" viewBox="0 0 100 100">
+            <path d="M50 10 C25 25 15 50 30 80 C40 92 50 95 50 95 C50 95 60 92 70 80 C85 50 75 25 50 10 Z"/>
+        </svg>
+
+        <!-- Leaf 6: Elegant Sprout -->
+        <svg class="leaf-silhouette leaf-6" viewBox="0 0 90 90">
+            <path d="M45 10 C32 25 25 45 45 80 C65 45 58 25 45 10 Z M45 25 L45 75"/>
+        </svg>
+    </div>
+
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 transition-all" id="mainNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
                 <i class="bi bi-leaf-fill text-emerald me-2"></i>
-                <span class="brand-text">Verdant</span>
+                <span class="brand-text">RenziFarm</span>
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,6 +79,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#simulator"><i class="bi bi-cpu text-emerald me-1"></i><span data-i18n="nav_simulator">Simulator IoT</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plant-care-tutorial"><i class="bi bi-journal-bookmark text-emerald me-1"></i><span data-i18n="nav_tutorial">Tutorial Rawat</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#bundle-builder"><i class="bi bi-palette text-emerald me-1"></i><span data-i18n="nav_bundle">Rakit Pod</span></a>
@@ -108,7 +144,7 @@
                         <span data-i18n="hero_title_1">Bawa Keindahan Alam ke</span> <span class="text-emerald" data-i18n="hero_title_2">Dalam Rumah Anda</span>
                     </h1>
                     <p class="lead text-muted mb-4">
-                        <span data-i18n="hero_desc">Verdant memadukan keindahan alam dengan teknologi otomatisasi canggih. Tumbuhkan sayuran, bunga, dan herbal segar bebas pestisida sepanjang tahun secara otomatis.</span>
+                        <span data-i18n="hero_desc">Renzifarm memadukan keindahan alam dengan teknologi otomatisasi canggih. Tumbuhkan sayuran, bunga, dan herbal segar bebas pestisida sepanjang tahun secara otomatis.</span>
                     </p>
                     <!-- Eco Canvas Particles -->
                     <canvas id="eco-particles-canvas"></canvas>
@@ -141,7 +177,7 @@
                 <div class="col-lg-6 mt-5 mt-lg-0 text-center text-lg-end" data-aos="zoom-in-up" data-aos-duration="1800" data-aos-delay="300" data-aos-easing="ease-out-back">
                     <div class="hero-image-wrapper position-relative d-inline-block">
                         <div class="hero-image-backdrop"></div>
-                        <img src="assets/hero_product.png" alt="Verdant Smart Garden Device" class="img-fluid rounded-4 shadow-lg hero-img" id="hero-img-placeholder">
+                        <img src="assets/hero_product.png" alt="Renzifarm Smart Garden Device" class="img-fluid rounded-4 shadow-lg hero-img" id="hero-img-placeholder">
                     </div>
                 </div>
             </div>
@@ -196,7 +232,7 @@
         </div>
     </section>
 
-    <!-- Verdant Digital Twin: IoT Live Garden Simulator Section -->
+    <!-- Renzifarm Digital Twin: IoT Live Garden Simulator Section -->
     <section class="simulator-section py-6 position-relative" id="simulator">
         <div class="container position-relative z-2">
             <div class="row justify-content-center text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
@@ -204,9 +240,9 @@
                     <span class="badge badge-emerald-subtle px-3 py-2 rounded-pill mb-2 fw-semibold">
                         <i class="bi bi-broadcast me-1"></i> <span data-i18n="sim_badge">Interactive IoT Hardware Console</span>
                     </span>
-                    <h2 class="display-5 fw-extrabold text-dark-green mt-2" data-i18n="sim_title">Verdant Digital Twin: Kendali Cerdas</h2>
+                    <h2 class="display-5 fw-extrabold text-dark-green mt-2" data-i18n="sim_title">Renzifarm Digital Twin: Kendali Cerdas</h2>
                     <p class="text-muted">
-                        Rasakan simulasi langsung mengendalikan perangkat pintar Verdant Pod. Ganti spektrum fotosintesis LED, aktifkan kabut penyiraman otomatis, dan saksikan akselerasi pertumbuhan tanaman dalam hitungan detik!
+                        Rasakan simulasi langsung mengendalikan perangkat pintar Renzifarm Pod. Ganti spektrum fotosintesis LED, aktifkan kabut penyiraman otomatis, dan saksikan akselerasi pertumbuhan tanaman dalam hitungan detik!
                     </p>
                 </div>
             </div>
@@ -256,7 +292,7 @@
                             <div class="sim-pod-base" id="simPodBase">
                                 <div class="d-flex align-items-center gap-2">
                                     <i class="bi bi-leaf-fill text-emerald fs-5"></i>
-                                    <span class="fw-bold small text-dark-green tracking-wide">VERDANT POD</span>
+                                    <span class="fw-bold small text-dark-green tracking-wide">RENZIFARM POD</span>
                                 </div>
                                 <div class="d-flex align-items-center gap-2">
                                     <span class="small text-muted" style="font-size: 0.75rem;">WATER 2L</span>
@@ -374,14 +410,14 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-out-quart" data-aos-offset="200">
                     <div class="showcase-img-wrapper position-relative">
                         <div class="showcase-img-decor"></div>
-                        <img src="assets/showcase_detail.png" alt="Verdant Pod Detail" class="img-fluid rounded-4 shadow-lg showcase-img" id="showcase-img-placeholder">
+                        <img src="assets/showcase_detail.png" alt="Renzifarm Pod Detail" class="img-fluid rounded-4 shadow-lg showcase-img" id="showcase-img-placeholder">
                     </div>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" data-aos-easing="ease-out-quart" data-aos-offset="200">
                     <span class="text-emerald fw-bold text-uppercase tracking-wider">Desain Premium</span>
-                    <h2 class="display-5 fw-extrabold text-dark-green mt-2 mb-4">Verdant Pod: Keindahan Minimalis untuk Rumah Anda</h2>
+                    <h2 class="display-5 fw-extrabold text-dark-green mt-2 mb-4">Renzifarm Pod: Keindahan Minimalis untuk Rumah Anda</h2>
                     <p class="text-muted mb-4">
-                        Didesain oleh desainer produk terkemuka, Verdant Pod tidak hanya berfungsi sebagai pot tanaman pintar, tetapi juga sebagai karya seni minimalis yang mempercantik ruang tamu, dapur, atau ruang kerja Anda.
+                        Didesain oleh desainer produk terkemuka, Renzifarm Pod tidak hanya berfungsi sebagai pot tanaman pintar, tetapi juga sebagai karya seni minimalis yang mempercantik ruang tamu, dapur, atau ruang kerja Anda.
                     </p>
                     
                     <ul class="list-unstyled mb-4">
@@ -416,6 +452,317 @@
         </div>
     </section>
 
+    <!-- Akademi Renzifarm: Tutorial Prototype Cara Merawat Tanaman Section -->
+    <section class="tutorial-section py-6 position-relative" id="plant-care-tutorial">
+        <div class="container position-relative z-2">
+            <div class="row justify-content-center text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <div class="col-lg-8">
+                    <span class="badge badge-emerald-subtle px-3 py-2 rounded-pill mb-2 fw-semibold">
+                        <i class="bi bi-book-half me-1"></i> <span data-i18n="tut_badge">Akademi Renzifarm: Prototype Panduan Merawat</span>
+                    </span>
+                    <h2 class="display-5 fw-extrabold text-dark-green mt-2" data-i18n="tut_title">Cara Merawat Tanaman: Dari Benih Hingga Panen Raya</h2>
+                    <p class="text-muted" data-i18n="tut_desc">
+                        Renzifarm tidak hanya menjual kit farm pintar, tetapi juga membimbing Anda dengan prototype tutorial interaktif: hidrasi otomatis, takaran nutrisi, teknik potong pucuk (topping), hingga pencegahan daun kuning.
+                    </p>
+
+                    <!-- Filter / Navigation Tabs for Tutorial Modules -->
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-4" id="careTutorialTabs">
+                        <button class="care-tab-pill active" data-tab="hydration">
+                            <span data-i18n="tut_tab_water">💧 Hidrasi & Nutrisi</span>
+                        </button>
+                        <button class="care-tab-pill" data-tab="lighting">
+                            <span data-i18n="tut_tab_light">💡 Siklus Cahaya LED</span>
+                        </button>
+                        <button class="care-tab-pill" data-tab="pruning">
+                            <span data-i18n="tut_tab_prune">✂️ Teknik Pemangkasan (Topping)</span>
+                        </button>
+                        <button class="care-tab-pill" data-tab="defense">
+                            <span data-i18n="tut_tab_health">🛡️ Diagnosa Daun Kuning</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 1: Hidrasi & Nutrisi Pintar -->
+            <div class="care-tab-pane" id="careTabHydration">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="care-guide-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="care-step-number">1</div>
+                                <h4 class="fw-bold text-dark-green mb-0">Manajemen Air &amp; Nutrisi Tanpa Tebak-Tebakan</h4>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Renzifarm Pod menggunakan sistem *passive sub-irrigation* dengan sumbu kapiler mineral. Tanaman hanya menyerap air sebanyak yang dibutuhkan stomata daun, mencegah busuk akar 100%.
+                            </p>
+
+                            <div class="d-flex flex-column gap-3">
+                                <div class="p-3 bg-light-green rounded-3 border">
+                                    <h6 class="fw-bold text-dark-green mb-1"><i class="bi bi-droplet-half text-primary me-2"></i>Jadwal Isi Tangki Air (2 Liter)</h6>
+                                    <small class="text-muted">Cukup isi ulang setiap <strong>2 hingga 3 minggu sekali</strong>. Periksa jendela indikator transparan di bagian depan pod.</small>
+                                </div>
+                                <div class="p-3 bg-light-green rounded-3 border">
+                                    <h6 class="fw-bold text-dark-green mb-1"><i class="bi bi-flask-fill text-emerald me-2"></i>Takaran Larutan Nutrisi AB Mix</h6>
+                                    <small class="text-muted">Campurkan <strong>5ml Pekatan A + 5ml Pekatan B</strong> ke dalam 1 Liter air bersih setiap kali Anda mengisi ulang tangki.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <!-- Interactive Nutrient Mixer Simulator -->
+                        <div class="card border-0 p-4 rounded-4 shadow-sm bg-white">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-emerald text-white px-3 py-1 rounded-pill">Prototype Simulator</span>
+                                <small class="text-muted"><i class="bi bi-sliders me-1"></i> Coba Takaran</small>
+                            </div>
+                            <h5 class="fw-bold text-dark-green mb-2">Simulasi Kepekatan Nutrisi (PPM Meter)</h5>
+                            <p class="text-muted small mb-3">Geser slider untuk melihat rekomendasi kepekatan nutrisi ideal untuk tanaman herbal &amp; sayuran:</p>
+
+                            <label class="d-flex justify-content-between small fw-bold text-dark-green mb-1">
+                                <span>Kepekatan Nutrisi:</span>
+                                <span class="text-emerald" id="nutrientPpmValue">750 PPM (Ideal untuk Kemangi &amp; Mint)</span>
+                            </label>
+                            <input type="range" class="form-range roi-slider" min="300" max="1400" step="50" value="750" id="nutrientPpmSlider">
+                            
+                            <div class="d-flex justify-content-between text-muted small mb-3" style="font-size: 0.72rem;">
+                                <span>300 (Tunas Lemah)</span>
+                                <span class="text-emerald fw-bold">600 - 900 (Optimal)</span>
+                                <span>1400 (Terlalu Pekat)</span>
+                            </div>
+
+                            <div class="p-3 rounded-3 text-center" id="nutrientStatusBox" style="background: rgba(25, 135, 84, 0.1); border: 1px solid rgba(25, 135, 84, 0.2);">
+                                <i class="bi bi-check-circle-fill text-emerald fs-4 d-block mb-1"></i>
+                                <strong class="text-dark-green d-block" id="nutrientStatusTitle">Kondisi Nutrisi Sempurna!</strong>
+                                <small class="text-muted" id="nutrientStatusDesc">Tanaman Anda menyerap mineral mikro &amp; makro secara seimbang tanpa risiko terbakar pupuk.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: Siklus Cahaya LED & Elevasi -->
+            <div class="care-tab-pane d-none" id="careTabLighting">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="care-guide-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="care-step-number">2</div>
+                                <h4 class="fw-bold text-dark-green mb-0">Aturan Siklus Cahaya &amp; Ketinggian Lampu</h4>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Lampu fotosintesis Renzifarm Pod dirancang meniru spektrum matahari terbit hingga terbenam. Kunci tanaman rimbun terletak pada jarak lampu dari tajuk daun.
+                            </p>
+
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-clock-fill text-emerald mt-1 fs-5"></i>
+                                    <div>
+                                        <strong class="text-dark-green d-block">Siklus 14 Jam On / 8 Jam Off</strong>
+                                        <small class="text-muted">Tanaman membutuhkan fase gelap untuk respirasi seluler dan penguatan akar. Lampu mati otomatis saat malam.</small>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-arrows-vertical text-emerald mt-1 fs-5"></i>
+                                    <div>
+                                        <strong class="text-dark-green d-block">Jaga Jarak Lampu 5 - 8 cm</strong>
+                                        <small class="text-muted">Tarik tiang teleskopik ke atas saat tanaman bertambah tinggi. Jangan biarkan daun menyentuh papan lampu LED.</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="card border-0 p-4 rounded-4 shadow-sm bg-white text-center">
+                            <span class="badge bg-emerald text-white px-3 py-1 rounded-pill mb-3 d-inline-block">Simulasi Elevasi Teleskopik</span>
+                            <h5 class="fw-bold text-dark-green mb-2">Sesuaikan Ketinggian Tiang Lampu</h5>
+                            <p class="text-muted small mb-4">Ubah ketinggian tiang lampu untuk menyesuaikan fase usia tanaman:</p>
+
+                            <div class="d-flex justify-content-center gap-2 mb-4">
+                                <button class="btn btn-outline-emerald btn-sm rounded-pill px-3 active" id="btnLampLow">Fase Tunas (Rendah)</button>
+                                <button class="btn btn-outline-emerald btn-sm rounded-pill px-3" id="btnLampMid">Fase Remaja (Sedang)</button>
+                                <button class="btn btn-outline-emerald btn-sm rounded-pill px-3" id="btnLampHigh">Fase Rimbun (Tinggi)</button>
+                            </div>
+
+                            <div class="p-4 bg-light-green rounded-4 border position-relative overflow-hidden" style="height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;">
+                                <div id="demoLampBar" style="width: 140px; height: 12px; background: #2b3035; border-radius: 6px; position: absolute; top: 40px; transition: top 0.4s ease; box-shadow: 0 0 15px #f59e0b;"></div>
+                                <div style="width: 4px; height: 110px; background: #94a3b8; position: absolute; bottom: 0;"></div>
+                                <i class="bi bi-flower2 text-emerald fs-1" style="position: relative; z-index: 2; margin-bottom: 5px;"></i>
+                            </div>
+                            <small class="text-muted d-block mt-2" id="lampHeightLabel">Ketinggian: 12 cm di atas pot (Ideal untuk tunas baru)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 3: Teknik Pemangkasan Topping (Interactive Pruning Prototype) -->
+            <div class="care-tab-pane d-none" id="careTabPruning">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="care-guide-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="care-step-number">3</div>
+                                <h4 class="fw-bold text-dark-green mb-0">Teknik Potong Pucuk (Topping / Pinching)</h4>
+                            </div>
+                            <p class="text-muted mb-3">
+                                Rahasia agar tanaman kemangi atau mint Anda berdaun lebat seperti semak bulat dan tidak kurus menjulang adalah <strong>pemangkasan pucuk</strong> secara berkala.
+                            </p>
+
+                            <div class="p-3 bg-light-green rounded-3 border mb-3">
+                                <h6 class="fw-bold text-dark-green mb-1"><i class="bi bi-scissors text-danger me-2"></i>Cara Melakukan Topping:</h6>
+                                <p class="small text-muted mb-0">
+                                    Ketika tanaman memiliki 3 pasang daun sejati, potong pucuk batang tepat <strong>0.5 cm di atas cabang daun</strong> (*node*). Hormon pertumbuhan auksin akan terdistribusi ke dua tunas ketiak, menghasilkan dua cabang baru yang lebat!
+                                </p>
+                            </div>
+                            <small class="text-success fw-bold"><i class="bi bi-lightning-charge-fill me-1"></i> Panen 2x hingga 3x lipat lebih melimpah!</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <!-- Hands-on Interactive Pruning Simulator -->
+                        <div class="card border-0 p-4 rounded-4 shadow-sm bg-white text-center">
+                            <span class="badge bg-danger text-white px-3 py-1 rounded-pill mb-2 d-inline-block">Coba Prototype Interaktif</span>
+                            <h5 class="fw-bold text-dark-green mb-1">Simulasi Gunting Pucuk (Topping)</h5>
+                            <p class="text-muted small mb-3">Klik tombol gunting di bawah untuk memotong pucuk dan amati percabangan ganda seketika:</p>
+
+                            <div class="pruning-interactive-box mb-3" style="min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <svg id="prunePlantSvg" width="160" height="160" viewBox="0 0 160 160">
+                                    <!-- Pot Base -->
+                                    <path d="M50 145 L110 145 L100 155 L60 155 Z" fill="#2d6a4f"/>
+                                    <!-- Main Stem -->
+                                    <path d="M80 145 L80 90" stroke="#2d6a4f" stroke-width="6" stroke-linecap="round"/>
+                                    
+                                    <!-- Lower Leaf Pair -->
+                                    <path d="M80 120 C60 115 55 105 58 95 C70 102 78 112 80 120 Z" fill="#40916c"/>
+                                    <path d="M80 120 C100 115 105 105 102 95 C90 102 82 112 80 120 Z" fill="#52b788"/>
+
+                                    <!-- Single Top Shoot (Before Prune) -->
+                                    <g id="topSingleShoot">
+                                        <line x1="60" y1="80" x2="100" y2="80" class="prune-cut-line"/>
+                                        <path d="M80 90 L80 60" stroke="#2d6a4f" stroke-width="5" stroke-linecap="round"/>
+                                        <circle cx="80" cy="55" r="8" fill="#74c69d"/>
+                                    </g>
+
+                                    <!-- Dual Bushy Branches (After Prune) -->
+                                    <g id="dualBushyBranches" opacity="0" transform="scale(0.8) translate(20, 20)">
+                                        <path d="M80 90 Q65 70 50 55" stroke="#2d6a4f" stroke-width="5" stroke-linecap="round"/>
+                                        <path d="M80 90 Q95 70 110 55" stroke="#2d6a4f" stroke-width="5" stroke-linecap="round"/>
+                                        <circle cx="48" cy="52" r="10" fill="#40916c"/>
+                                        <circle cx="112" cy="52" r="10" fill="#52b788"/>
+                                        <circle cx="80" cy="65" r="12" fill="#74c69d"/>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <button class="btn btn-danger btn-sm rounded-pill px-4 fw-bold shadow-sm" id="btnSimulatePrune">
+                                <i class="bi bi-scissors me-1"></i> <span id="pruneBtnLabel">Gunting Pucuk Sekarang (Topping)</span>
+                            </button>
+                            <div class="small text-muted mt-2" id="pruneFeedbackText">
+                                Status: Batang tunggal belum dipotong. Potong pucuk untuk merangsang 2 cabang baru.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 4: Diagnosa Daun & Pencegahan Hama Alami -->
+            <div class="care-tab-pane d-none" id="careTabDefense">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="care-guide-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="care-step-number">4</div>
+                                <h4 class="fw-bold text-dark-green mb-0">Deteksi Dini &amp; Solusi Daun Sehat</h4>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Mengetahui apa yang sedang dialami tanaman lewat warna daun adalah kunci menjadi ahli *urban gardener*.
+                            </p>
+
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <div class="p-3 bg-white rounded-3 border d-flex gap-3 align-items-center">
+                                        <div class="rounded-circle bg-warning-subtle text-warning p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+                                            <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-dark-green d-block">Daun Bawah Menguning</strong>
+                                            <small class="text-muted">Proses penuaan daun tua yang wajar. Cukup gunting daun tua agar nutrisi mengalir ke daun muda.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 bg-white rounded-3 border d-flex gap-3 align-items-center">
+                                        <div class="rounded-circle bg-danger-subtle text-danger p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+                                            <i class="bi bi-droplet-slash fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-dark-green d-block">Daun Layu / Lemas</strong>
+                                            <small class="text-muted">Suhu ruangan terlalu panas di atas 30°C. Pindahkan pod ke area bersirkulasi udara sejuk.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 bg-white rounded-3 border d-flex gap-3 align-items-center">
+                                        <div class="rounded-circle bg-success-subtle text-success p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+                                            <i class="bi bi-shield-check fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-dark-green d-block">Pencegahan Hama Organik</strong>
+                                            <small class="text-muted">Semprotkan air rebusan bawang putih atau minyak nimba (neem oil) tipis-tipis. 100% aman untuk konsumsi.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <!-- Daily Routine Interactive Checklist -->
+                        <div class="card border-0 p-4 rounded-4 shadow-sm bg-white">
+                            <span class="badge bg-emerald text-white px-3 py-1 rounded-pill mb-2 d-inline-block">Hands-on Care Checklist</span>
+                            <h5 class="fw-bold text-dark-green mb-1">Checklist Perawatan Mingguan Mandiri</h5>
+                            <p class="text-muted small mb-3">Centang tugas perawatan di bawah ini untuk menguji kesiapan Anda menjadi Urban Farmer Renzifarm:</p>
+
+                            <div class="d-flex flex-column gap-2 mb-3" id="careChecklistGroup">
+                                <label class="care-task-item">
+                                    <input type="checkbox" class="care-task-checkbox">
+                                    <span class="small fw-semibold text-dark-green">1. Cek level air tangki 2L melalui jendela depan</span>
+                                </label>
+                                <label class="care-task-item">
+                                    <input type="checkbox" class="care-task-checkbox">
+                                    <span class="small fw-semibold text-dark-green">2. Berikan 5ml nutrisi A &amp; B saat isi air</span>
+                                </label>
+                                <label class="care-task-item">
+                                    <input type="checkbox" class="care-task-checkbox">
+                                    <span class="small fw-semibold text-dark-green">3. Pangkas pucuk (topping) agar tanaman bercabang lebat</span>
+                                </label>
+                                <label class="care-task-item">
+                                    <input type="checkbox" class="care-task-checkbox">
+                                    <span class="small fw-semibold text-dark-green">4. Petik daun terluar untuk bahan masak dapur</span>
+                                </label>
+                            </div>
+
+                            <div class="mb-2 d-flex justify-content-between small text-muted">
+                                <span>Progres Belajar:</span>
+                                <strong class="text-emerald" id="careProgressText">0 / 4 Selesai</strong>
+                            </div>
+                            <div class="care-progress-bar mb-3">
+                                <div class="care-progress-fill" id="careProgressBar"></div>
+                            </div>
+
+                            <div class="p-3 bg-light-green rounded-3 text-center d-none" id="farmerBadgeBox">
+                                <i class="bi bi-award-fill text-warning fs-2 d-block mb-1"></i>
+                                <h6 class="fw-bold text-dark-green mb-1">Luar Biasa! Anda Siap Panen Raya 🌿</h6>
+                                <small class="text-muted">Anda telah menguasai seluruh prinsip dasar bertani pintar di rumah bersama Renzifarm!</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Interactive Pod Customizer & Starter Kit Bundle Builder Section -->
     <section class="bundle-section py-6 position-relative" id="bundle-builder">
         <div class="container position-relative z-2">
@@ -426,7 +773,7 @@
                     </span>
                     <h2 class="display-5 fw-extrabold text-dark-green mt-2" data-i18n="bundle_title">Rakit Paket Starter Kit Kebun Anda</h2>
                     <p class="text-muted">
-                        Pilih warna Verdant Pod yang menyatu harmonis dengan estetika ruangan Anda, lalu pilih 3 Seed Pods benih premium gratis yang siap Anda tanam seketika.
+                        Pilih warna Renzifarm Pod yang menyatu harmonis dengan estetika ruangan Anda, lalu pilih 3 Seed Pods benih premium gratis yang siap Anda tanam seketika.
                     </p>
                 </div>
             </div>
@@ -435,7 +782,7 @@
                 <!-- Left: Pod Color Customizer Visualizer -->
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
                     <div class="card border-0 p-4 rounded-4 shadow-sm bg-white h-100">
-                        <h4 class="fw-bold text-dark-green mb-3" data-i18n="bundle_step1">1. Pilih Warna Verdant Pod</h4>
+                        <h4 class="fw-bold text-dark-green mb-3" data-i18n="bundle_step1">1. Pilih Warna Renzifarm Pod</h4>
                         <p class="text-muted small mb-4">Finishing matte premium tahan sidik jari dengan material plastik daur ulang tersertifikasi.</p>
 
                         <!-- Virtual Color Preview Box -->
@@ -562,7 +909,7 @@
                         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
                             <div>
                                 <span class="badge bg-danger text-white mb-1">PROMO PRE-ORDER DISKON 15%</span>
-                                <h5 class="fw-bold text-dark-green mb-0">Paket Starter Kit Lengkap Verdant Pod</h5>
+                                <h5 class="fw-bold text-dark-green mb-0">Paket Starter Kit Lengkap Renzifarm Pod</h5>
                             </div>
                             <div class="text-end">
                                 <del class="text-muted small">Rp 1.750.000</del>
@@ -670,7 +1017,7 @@
                                         <span class="fw-bold text-dark-green small">Balik Modal (BEP): Cepat dalam ~8 Bulan!</span>
                                     </div>
                                     <p class="small text-muted mb-0">
-                                        Verdant Pod mampu memproduksi hasil panen segar bernilai jutaan rupiah setiap tahunnya tanpa risiko layu di kulkas.
+                                        Renzifarm Pod mampu memproduksi hasil panen segar bernilai jutaan rupiah setiap tahunnya tanpa risiko layu di kulkas.
                                     </p>
                                 </div>
                             </div>
@@ -724,7 +1071,7 @@
             <div class="row justify-content-center text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
                 <div class="col-lg-7">
                     <span class="text-emerald fw-bold text-uppercase tracking-wider">Testimoni Pengguna</span>
-                    <h2 class="display-5 fw-extrabold text-dark-green mt-2">Apa Kata Mereka Tentang Verdant?</h2>
+                    <h2 class="display-5 fw-extrabold text-dark-green mt-2">Apa Kata Mereka Tentang Renzifarm?</h2>
                     <p class="text-muted">Kisah nyata dari para urban gardener yang menyukai kesegaran alami di rumah mereka.</p>
                 </div>
             </div>
@@ -810,79 +1157,79 @@
                 <div class="col-lg-7">
                     <span class="text-emerald fw-bold text-uppercase tracking-wider">Terhubung Bersama Kami</span>
                     <h2 class="display-5 fw-extrabold text-dark-green mt-2">Ikuti Perjalanan Kami di Media Sosial</h2>
-                    <p class="text-muted">Dapatkan tips berkebun, resep segar, promo eksklusif, dan cerita dari komunitas Verdant di seluruh Indonesia.</p>
+                    <p class="text-muted">Dapatkan tips berkebun, resep segar, promo eksklusif, dan cerita dari komunitas Renzifarm di seluruh Indonesia.</p>
                 </div>
             </div>
 
             <div class="row g-3 g-lg-4 justify-content-center">
                 <!-- Instagram -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="50" data-aos-easing="ease-out-back">
-                    <a href="https://instagram.com/verdant.id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-instagram">
+                    <a href="https://instagram.com/renzifarm.id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-instagram">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-instagram"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">Instagram</h6>
-                        <small class="text-muted">@verdant.id</small>
+                        <small class="text-muted">@renzifarm.id</small>
                         <span class="social-followers mt-2">125K Followers</span>
                     </a>
                 </div>
 
                 <!-- Facebook -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-out-back">
-                    <a href="https://facebook.com/VerdantIndonesia" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-facebook">
+                    <a href="https://facebook.com/RenzifarmIndonesia" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-facebook">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-facebook"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">Facebook</h6>
-                        <small class="text-muted">Verdant Indonesia</small>
+                        <small class="text-muted">Renzifarm Indonesia</small>
                         <span class="social-followers mt-2">89K Likes</span>
                     </a>
                 </div>
 
                 <!-- YouTube -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="250" data-aos-easing="ease-out-back">
-                    <a href="https://youtube.com/@VerdantID" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-youtube">
+                    <a href="https://youtube.com/@RenzifarmID" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-youtube">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-youtube"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">YouTube</h6>
-                        <small class="text-muted">@VerdantID</small>
+                        <small class="text-muted">@RenzifarmID</small>
                         <span class="social-followers mt-2">45K Subscribers</span>
                     </a>
                 </div>
 
                 <!-- TikTok -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="350" data-aos-easing="ease-out-back">
-                    <a href="https://tiktok.com/@verdant.id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-tiktok">
+                    <a href="https://tiktok.com/@renzifarm.id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-tiktok">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-tiktok"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">TikTok</h6>
-                        <small class="text-muted">@verdant.id</small>
+                        <small class="text-muted">@renzifarm.id</small>
                         <span class="social-followers mt-2">200K Followers</span>
                     </a>
                 </div>
 
                 <!-- Twitter / X -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="450" data-aos-easing="ease-out-back">
-                    <a href="https://x.com/VerdantID" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-twitter">
+                    <a href="https://x.com/RenzifarmID" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-twitter">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-twitter-x"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">X (Twitter)</h6>
-                        <small class="text-muted">@VerdantID</small>
+                        <small class="text-muted">@RenzifarmID</small>
                         <span class="social-followers mt-2">32K Followers</span>
                     </a>
                 </div>
 
                 <!-- LinkedIn -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="550" data-aos-easing="ease-out-back">
-                    <a href="https://linkedin.com/company/verdant-id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-linkedin">
+                    <a href="https://linkedin.com/company/renzifarm-id" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-linkedin">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-linkedin"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">LinkedIn</h6>
-                        <small class="text-muted">Verdant Indonesia</small>
+                        <small class="text-muted">Renzifarm Indonesia</small>
                         <span class="social-followers mt-2">15K Connections</span>
                     </a>
                 </div>
@@ -901,12 +1248,12 @@
 
                 <!-- Telegram -->
                 <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="750" data-aos-easing="ease-out-back">
-                    <a href="https://t.me/VerdantCommunity" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-telegram">
+                    <a href="https://t.me/RenzifarmCommunity" target="_blank" class="social-card d-flex flex-column align-items-center text-decoration-none p-4 rounded-4 transition-all" id="social-telegram">
                         <div class="social-card-icon mb-3">
                             <i class="bi bi-telegram"></i>
                         </div>
                         <h6 class="fw-bold text-dark-green mb-1">Telegram</h6>
-                        <small class="text-muted">Verdant Community</small>
+                        <small class="text-muted">Renzifarm Community</small>
                         <span class="social-followers mt-2">8K Members</span>
                     </a>
                 </div>
@@ -927,7 +1274,7 @@
                         <div class="position-relative z-2">
                             <h2 class="display-4 fw-extrabold mb-3">Siap untuk Memulai Kebun Anda?</h2>
                             <p class="lead mb-4 mx-auto" style="max-width: 600px;">
-                                Daftar hari ini dan jadilah salah satu yang pertama menerima Verdant Pod dengan diskon eksklusif 15% serta gratis 3 Seed Pods premium.
+                                Daftar hari ini dan jadilah salah satu yang pertama menerima Renzifarm Pod dengan diskon eksklusif 15% serta gratis 3 Seed Pods premium.
                             </p>
                             
                             <div class="row justify-content-center">
@@ -957,27 +1304,27 @@
                 <div class="col-lg-4">
                     <a class="d-flex align-items-center fw-bold text-white text-decoration-none mb-3" href="#">
                         <i class="bi bi-leaf-fill text-emerald me-2 fs-4"></i>
-                        <span class="fs-4">Verdant</span>
+                        <span class="fs-4">Renzifarm</span>
                     </a>
                     <p class="text-white-50 mb-4">
                         Menggabungkan inovasi teknologi hijau dengan keindahan alamiah untuk menciptakan masa depan perkotaan yang lebih lestari.
                     </p>
                     <div class="social-links d-flex flex-wrap gap-2">
-                        <a href="https://instagram.com/verdant.id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://facebook.com/VerdantIndonesia" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://youtube.com/@VerdantID" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="https://tiktok.com/@verdant.id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="https://x.com/VerdantID" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://linkedin.com/company/verdant-id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://instagram.com/renzifarm.id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com/RenzifarmIndonesia" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://youtube.com/@RenzifarmID" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://tiktok.com/@renzifarm.id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://x.com/RenzifarmID" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com/company/renzifarm-id" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="https://wa.me/6281234567890" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://t.me/VerdantCommunity" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Telegram"><i class="bi bi-telegram"></i></a>
+                        <a href="https://t.me/RenzifarmCommunity" target="_blank" class="social-icon rounded-circle d-flex align-items-center justify-content-center text-white bg-emerald-subtle-hover" title="Telegram"><i class="bi bi-telegram"></i></a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-2 offset-lg-2">
                     <h6 class="fw-bold text-white mb-4">Produk</h6>
                     <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="#showcase" class="text-white-50 text-decoration-none">Verdant Pod</a></li>
-                        <li class="mb-2"><a href="#features" class="text-white-50 text-decoration-none">Verdant App</a></li>
+                        <li class="mb-2"><a href="#showcase" class="text-white-50 text-decoration-none">Renzifarm Pod</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white-50 text-decoration-none">Renzifarm App</a></li>
                         <li class="mb-2"><a href="#how-it-works" class="text-white-50 text-decoration-none">Seed Pods</a></li>
                         <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none">Aksesoris</a></li>
                     </ul>
@@ -1003,7 +1350,7 @@
             </div>
             <div class="row pt-4 border-top border-emerald-subtle align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0 text-white-50">&copy; 2026 Verdant. Hak Cipta Dilindungi.</p>
+                    <p class="mb-0 text-white-50">&copy; 2026 Renzifarm. Hak Cipta Dilindungi.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <p class="mb-0 text-white-50">Dibuat dengan <i class="bi bi-heart-fill text-emerald mx-1"></i> untuk masa depan yang lebih hijau.</p>
@@ -1046,7 +1393,7 @@
 
                     <!-- Step 1: Ruangan -->
                     <div class="quiz-step" id="quizStep1">
-                        <h6 class="fw-bold text-dark-green mb-3">1. Di ruangan mana Verdant Pod akan diletakkan?</h6>
+                        <h6 class="fw-bold text-dark-green mb-3">1. Di ruangan mana Renzifarm Pod akan diletakkan?</h6>
                         <div class="row g-3">
                             <div class="col-sm-4">
                                 <div class="quiz-option-card active" data-q="room" data-val="kitchen">
@@ -1147,7 +1494,7 @@
                         <span class="badge bg-emerald text-white px-3 py-1 rounded-pill mb-2">Tanaman Paling Cocok untuk Anda:</span>
                         <h3 class="fw-extrabold text-dark-green mb-2" id="quizMatchTitle">🌱 Kemangi Italia (Genovese Basil)</h3>
                         <p class="text-muted mx-auto mb-4" style="max-width: 500px;" id="quizMatchDesc">
-                            Kemangi Italia tumbuh sangat cepat dan subur di Verdant Pod. Sangat cocok di dapur untuk dipetik langsung saat membuat pasta, saus pesto, atau garnish makanan!
+                            Kemangi Italia tumbuh sangat cepat dan subur di Renzifarm Pod. Sangat cocok di dapur untuk dipetik langsung saat membuat pasta, saus pesto, atau garnish makanan!
                         </p>
 
                         <div class="d-flex justify-content-center gap-3 mb-4">
@@ -1180,7 +1527,7 @@
                 <div class="modal-header border-0 pb-0">
                     <div>
                         <span class="badge badge-emerald-subtle px-3 py-1 rounded-pill mb-1">Pemesanan Resmi</span>
-                        <h4 class="modal-title fw-bold text-dark-green" id="checkoutModalLabel">Formulir Pre-order Verdant Pod</h4>
+                        <h4 class="modal-title fw-bold text-dark-green" id="checkoutModalLabel">Formulir Pre-order Renzifarm Pod</h4>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -1270,7 +1617,7 @@
                         <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-3">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-leaf-fill text-emerald fs-3 me-2"></i>
-                                <h4 class="fw-extrabold text-dark-green mb-0">VERDANT</h4>
+                                <h4 class="fw-extrabold text-dark-green mb-0">RENZIFARM</h4>
                             </div>
                             <span class="badge bg-success text-white px-3 py-1 rounded-pill">PRE-ORDER CONFIRMED</span>
                         </div>
@@ -1289,7 +1636,7 @@
                         <div class="p-3 bg-light-green rounded-3 mb-3">
                             <div class="fw-bold text-dark-green small mb-1">Spesifikasi Unit:</div>
                             <div class="small text-muted" id="receiptDetails">
-                                Verdant Smart Garden Pod (Sage Emerald) + 3 Free Seed Pods (Kemangi, Tomat Ceri, Mint).
+                                Renzifarm Smart Garden Pod (Sage Emerald) + 3 Free Seed Pods (Kemangi, Tomat Ceri, Mint).
                             </div>
                         </div>
 
@@ -1312,8 +1659,8 @@
         </div>
     </div>
 
-    <!-- 4. Floating Verdant AI Garden Copilot -->
-    <div class="ai-copilot-trigger shadow" id="aiCopilotTrigger" title="Tanya Dr. Verdant AI">
+    <!-- 4. Floating Renzifarm AI Garden Copilot -->
+    <div class="ai-copilot-trigger shadow" id="aiCopilotTrigger" title="Tanya Dr. Renzi AI">
         <div class="ai-trigger-pulse"></div>
         <i class="bi bi-robot fs-3 text-white"></i>
     </div>
@@ -1326,7 +1673,7 @@
                     <i class="bi bi-robot fs-5"></i>
                 </div>
                 <div>
-                    <h6 class="mb-0 fw-bold">Dr. Verdant AI</h6>
+                    <h6 class="mb-0 fw-bold">Dr. Renzi AI</h6>
                     <small class="text-white-50" style="font-size: 0.72rem;"><i class="bi bi-circle-fill text-success me-1" style="font-size: 0.5rem;"></i>Agronomist Cerdas Siap Membantu</small>
                 </div>
             </div>
@@ -1336,7 +1683,7 @@
         <div class="ai-messages-list" id="aiMessagesList">
             <!-- Welcome Bot Message -->
             <div class="ai-bubble ai-bubble-bot">
-                👋 Halo! Saya <strong>Dr. Verdant</strong>, asisten cerdas agronomi Anda. Ada yang bisa saya bantu seputar pemilihan benih, pengaturan lampu fotosintesis, atau tips panen?
+                👋 Halo! Saya <strong>Dr. Renzi</strong>, asisten cerdas agronomi Anda. Ada yang bisa saya bantu seputar pemilihan benih, pengaturan lampu fotosintesis, atau tips panen?
             </div>
         </div>
 
@@ -1365,7 +1712,7 @@
         </div>
         <div class="flex-grow-1" style="line-height: 1.25;">
             <strong class="d-block small text-dark-green" id="socialToastName">Rian D. dari Jakarta</strong>
-            <small class="text-muted" style="font-size: 0.72rem;" id="socialToastAction">Pre-order Verdant Pod (Sage Emerald) • 2 mnt lalu</small>
+            <small class="text-muted" style="font-size: 0.72rem;" id="socialToastAction">Pre-order Renzifarm Pod (Sage Emerald) • 2 mnt lalu</small>
         </div>
         <button type="button" class="btn-close btn-sm" id="closeSocialToast" aria-label="Close"></button>
     </div>

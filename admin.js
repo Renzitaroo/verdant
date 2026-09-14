@@ -1,4 +1,4 @@
-// JavaScript untuk Verdant Admin Dashboard
+// JavaScript untuk Renzifarm Admin Dashboard
 
 document.addEventListener('DOMContentLoaded', function () {
     
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Load data awal dari localStorage
     function loadOrders() {
-        const storedOrders = localStorage.getItem('verdant_orders');
+        let storedOrders = localStorage.getItem('renzifarm_orders') || localStorage.getItem('renzifarm_orders');
         if (storedOrders) {
             try {
                 orders = JSON.parse(storedOrders);
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Simpan data orders ke localStorage
     function saveOrders() {
-        localStorage.setItem('verdant_orders', JSON.stringify(orders));
+        localStorage.setItem('renzifarm_orders', JSON.stringify(orders));
     }
 
     // Format mata uang Rupiah
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (cleanPhone.startsWith('0')) cleanPhone = '62' + cleanPhone.slice(1);
 
             const waBtnHtml = cleanPhone ? `
-                <a href="https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Halo ${custName}! Kami dari tim Verdant ingin mengonfirmasi status pesanan Verdant Pod Anda (${order.id}).`)}" 
+                <a href="https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Halo ${custName}! Kami dari tim Renzifarm ingin mengonfirmasi status pesanan Renzifarm Pod Anda (${order.id}).`)}" 
                    target="_blank" class="btn btn-sm btn-outline-success rounded-circle" title="Chat WhatsApp">
                     <i class="bi bi-whatsapp"></i>
                 </a>
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Pre-order Verdant Pod',
+                    label: 'Pre-order Renzifarm Pod',
                     data: dataValues,
                     borderColor: '#198754',
                     backgroundColor: 'rgba(25, 135, 84, 0.1)',
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const statusSelect = document.getElementById('manualStatus');
 
             const newOrder = {
-                id: 'VRD-' + Math.floor(1000 + Math.random() * 9000),
+                id: 'RNZ-' + Math.floor(1000 + Math.random() * 9000),
                 name: 'Pesanan Manual',
                 email: emailInput.value,
                 whatsapp: '081234567890',
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dummyBtn.addEventListener('click', function () {
             const dummyOrders = [
                 {
-                    id: 'VRD-2345',
+                    id: 'RNZ-2345',
                     name: 'Budi Santoso',
                     email: 'budi.santoso@gmail.com',
                     whatsapp: '081234567890',
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     status: 'Delivered'
                 },
                 {
-                    id: 'VRD-8761',
+                    id: 'RNZ-8761',
                     name: 'Anisa Lestari',
                     email: 'anisa.lestari@yahoo.com',
                     whatsapp: '081987654321',
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     status: 'Delivered'
                 },
                 {
-                    id: 'VRD-5432',
+                    id: 'RNZ-5432',
                     name: 'Rizky Hidayat',
                     email: 'rizky.hidayat@outlook.com',
                     whatsapp: '085712349999',
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     status: 'Shipped'
                 },
                 {
-                    id: 'VRD-1908',
+                    id: 'RNZ-1908',
                     name: 'Citra Permata',
                     email: 'citra.permata@gmail.com',
                     whatsapp: '082133445566',
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     status: 'Pending'
                 },
                 {
-                    id: 'VRD-7612',
+                    id: 'RNZ-7612',
                     name: 'Hendra Wijaya',
                     email: 'hendra.wijaya@gmail.com',
                     whatsapp: '081399887766',
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     status: 'Pending'
                 },
                 {
-                    id: 'VRD-3049',
+                    id: 'RNZ-3049',
                     name: 'Melissa Putri',
                     email: 'melissa.putri@hotmail.com',
                     whatsapp: '087811223344',

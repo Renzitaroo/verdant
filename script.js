@@ -1,4 +1,4 @@
-// JavaScript untuk Verdant Landing Page & Interaktivitas Canggih
+// JavaScript untuk Renzifarm Landing Page & Interaktivitas Canggih
 
 document.addEventListener('DOMContentLoaded', function () {
     
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggleIcon = document.getElementById('themeToggleIcon');
 
     // Load saved preference
-    const savedTheme = localStorage.getItem('verdant_theme');
+    const savedTheme = localStorage.getItem('renzifarm_theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
         if (themeToggleIcon) {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
         themeToggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('verdant_theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('renzifarm_theme', isDark ? 'dark' : 'light');
 
             if (themeToggleIcon) {
                 if (isDark) {
@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // =========================================================================
-    // 7. VERDANT DIGITAL TWIN (IoT LIVE SIMULATOR)
+    // 7. RENZIFARM DIGITAL TWIN (IoT LIVE SIMULATOR)
     // =========================================================================
     const simLightBeam = document.getElementById('simLightBeam');
     const simLampEmitter = document.getElementById('simLampEmitter');
@@ -649,7 +649,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnGenerateDigitalSlip = document.getElementById('btnGenerateDigitalSlip');
 
     function createOrderData() {
-        const name = document.getElementById('custName').value || 'Pelanggan Verdant';
+        const name = document.getElementById('custName').value || 'Pelanggan Renzifarm';
         const phone = document.getElementById('custWhatsapp').value || '-';
         const email = document.getElementById('custEmail').value || '-';
         const city = document.getElementById('custCity').value || 'Indonesia';
@@ -658,7 +658,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const seedNames = Array.from(selectedCards).map(c => c.dataset.seed);
 
         const newOrder = {
-            id: 'VRD-' + Math.floor(1000 + Math.random() * 9000),
+            id: 'RNZ-' + Math.floor(1000 + Math.random() * 9000),
             name: name,
             whatsapp: phone,
             email: email,
@@ -677,9 +677,9 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Save to localStorage for Admin Portal
-        let orders = JSON.parse(localStorage.getItem('verdant_orders')) || [];
+        let orders = JSON.parse(localStorage.getItem('renzifarm_orders')) || [];
         orders.unshift(newOrder);
-        localStorage.setItem('verdant_orders', JSON.stringify(orders));
+        localStorage.setItem('renzifarm_orders', JSON.stringify(orders));
 
         return newOrder;
     }
@@ -694,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Construct WhatsApp URL
             const seedListStr = order.seeds.join(', ');
-            const message = `Halo Verdant Indonesia! Saya ingin konfirmasi Pre-order Verdant Pod:
+            const message = `Halo Renzifarm Indonesia! Saya ingin konfirmasi Pre-order Renzifarm Pod:
 - ID Pesanan: ${order.id}
 - Nama: ${order.name}
 - Kota: ${order.city}
@@ -759,12 +759,12 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
         if (nameEl) nameEl.textContent = order.name;
         if (waEl) waEl.textContent = order.whatsapp;
         if (detailsEl) {
-            detailsEl.textContent = `Verdant Smart Garden Pod (${order.podColor}) + 3 Seed Pods Gratis (${order.seeds.join(', ')}). Pengiriman ke: ${order.city}.`;
+            detailsEl.textContent = `Renzifarm Smart Garden Pod (${order.podColor}) + 3 Seed Pods Gratis (${order.seeds.join(', ')}). Pengiriman ke: ${order.city}.`;
         }
     }
 
     // =========================================================================
-    // 12. VERDANT AI GARDEN COPILOT (VIRTUAL AGRONOMIST)
+    // 12. RENZIFARM AI GARDEN COPILOT (VIRTUAL AGRONOMIST)
     // =========================================================================
     const aiTrigger = document.getElementById('aiCopilotTrigger');
     const aiBox = document.getElementById('aiCopilotBox');
@@ -798,7 +798,7 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             },
             {
                 keywords: ['lampu', 'jam', 'led', 'cahaya', 'spektrum', 'terang'],
-                response: '💡 Lampu LED spektrum fotosintesis Verdant Pod dirancang otomatis menyala **14-16 jam per hari** lalu beristirahat 8 jam. Ini meniru ritme sirkadian matahari di alam bebas agar tanaman tidak stres.'
+                response: '💡 Lampu LED spektrum fotosintesis Renzifarm Pod dirancang otomatis menyala **14-16 jam per hari** lalu beristirahat 8 jam. Ini meniru ritme sirkadian matahari di alam bebas agar tanaman tidak stres.'
             },
             {
                 keywords: ['panen', 'petik', 'kemangi', 'basil', 'potong'],
@@ -810,15 +810,15 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             },
             {
                 keywords: ['resep', 'pesto', 'pasta', 'masak'],
-                response: '🍝 **Resep Pesto Segar 5 Menit**: Haluskan 2 cangkir daun kemangi segar Verdant + 2 siung bawang putih + 1/4 cangkir kacang mede sangrai + 1/2 cangkir minyak zaitun extra virgin + keju parmesan dan garam. Aduk bersama pasta hangat!'
+                response: '🍝 **Resep Pesto Segar 5 Menit**: Haluskan 2 cangkir daun kemangi segar Renzifarm + 2 siung bawang putih + 1/4 cangkir kacang mede sangrai + 1/2 cangkir minyak zaitun extra virgin + keju parmesan dan garam. Aduk bersama pasta hangat!'
             },
             {
                 keywords: ['air', 'tangki', 'isi', 'siram', 'penyiraman'],
-                response: '💧 Tangki air Verdant Pod berkapasitas 2 Liter. Berkat sistem sirkulasi mikro tertutup kami, Anda hanya perlu mengisi ulang air **setiap 2 hingga 3 minggu sekali**. Praktis bahkan saat Anda liburan ke luar kota!'
+                response: '💧 Tangki air Renzifarm Pod berkapasitas 2 Liter. Berkat sistem sirkulasi mikro tertutup kami, Anda hanya perlu mengisi ulang air **setiap 2 hingga 3 minggu sekali**. Praktis bahkan saat Anda liburan ke luar kota!'
             },
             {
                 keywords: ['garansi', 'rusak', 'ganti', 'servis'],
-                response: '🛡️ Setiap Verdant Pod dilindungi **Garansi Resmi 1 Tahun Ganti Baru**. Jika modul lampu LED atau pompa mikro mengalami kendala teknis, tim kami akan menukarnya langsung tanpa ribet.'
+                response: '🛡️ Setiap Renzifarm Pod dilindungi **Garansi Resmi 1 Tahun Ganti Baru**. Jika modul lampu LED atau pompa mikro mengalami kendala teknis, tim kami akan menukarnya langsung tanpa ribet.'
             }
         ],
         en: [
@@ -840,15 +840,15 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             },
             {
                 keywords: ['recipe', 'pesto', 'pasta', 'cook'],
-                response: '🍝 **5-Minute Fresh Pesto**: Blend 2 cups fresh Verdant basil leaves + 2 cloves garlic + 1/4 cup toasted walnuts/pine nuts + 1/2 cup extra virgin olive oil + grated parmesan and sea salt. Toss with warm pasta!'
+                response: '🍝 **5-Minute Fresh Pesto**: Blend 2 cups fresh Renzifarm basil leaves + 2 cloves garlic + 1/4 cup toasted walnuts/pine nuts + 1/2 cup extra virgin olive oil + grated parmesan and sea salt. Toss with warm pasta!'
             },
             {
                 keywords: ['water', 'tank', 'refill', 'reservoir'],
-                response: '💧 Verdant Pod holds a generous 2L water reservoir. Thanks to our self-circulating passive sub-irrigation system, you only need to refill it **once every 2 to 3 weeks**!'
+                response: '💧 Renzifarm Pod holds a generous 2L water reservoir. Thanks to our self-circulating passive sub-irrigation system, you only need to refill it **once every 2 to 3 weeks**!'
             },
             {
                 keywords: ['warranty', 'defect', 'guarantee', 'support'],
-                response: '🛡️ Every Verdant Pod includes a **1-Year Official Replacement Warranty**. If your LED panel or pump encounters any technical fault, we will swap it with a brand new unit.'
+                response: '🛡️ Every Renzifarm Pod includes a **1-Year Official Replacement Warranty**. If your LED panel or pump encounters any technical fault, we will swap it with a brand new unit.'
             }
         ],
         ja: [
@@ -858,7 +858,7 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             },
             {
                 keywords: ['ライト', '時間', 'led', '照射', '照明'],
-                response: '💡 Verdant Podの光合成LEDは、1日**14〜16時間自動点灯／8時間消灯**のサーカディアンリズム（体内時計）を自動再現しています。'
+                response: '💡 Renzifarm Podの光合成LEDは、1日**14〜16時間自動点灯／8時間消灯**のサーカディアンリズム（体内時計）を自動再現しています。'
             },
             {
                 keywords: ['収穫', '摘芯', 'バジル', '切り方'],
@@ -874,7 +874,7 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             },
             {
                 keywords: ['水', 'タンク', '給水', '頻度'],
-                response: '💧 Verdant Podのタンク容量はたっぷり2L。循環マイクロ給水システムにより、水の補充は**約2〜3週間に1回**だけでOKです！長期旅行時も安心です。'
+                response: '💧 Renzifarm Podのタンク容量はたっぷり2L。循環マイクロ給水システムにより、水の補充は**約2〜3週間に1回**だけでOKです！長期旅行時も安心です。'
             }
         ]
     };
@@ -904,7 +904,7 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
         setTimeout(() => {
             typingEl.remove();
 
-            const activeLang = localStorage.getItem('verdant_lang') || 'id';
+            const activeLang = localStorage.getItem('renzifarm_lang') || 'id';
             const kb = agronomyKnowledge[activeLang] || agronomyKnowledge.id;
             const lower = query.toLowerCase();
             let matched = kb.find(item => 
@@ -915,11 +915,11 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
                 addMessage(matched.response);
             } else {
                 if (activeLang === 'en') {
-                    addMessage(`🌿 Great question about "${query}"! Verdant Pod uses closed-loop mineral sponge hydroponics with precision spectrum LEDs. Your greens are guaranteed optimal hydration and balanced nourishment.`);
+                    addMessage(`🌿 Great question about "${query}"! Renzifarm Pod uses closed-loop mineral sponge hydroponics with precision spectrum LEDs. Your greens are guaranteed optimal hydration and balanced nourishment.`);
                 } else if (activeLang === 'ja') {
-                    addMessage(`🌿 「${query}」についてのご質問ですね！Verdant Podは特殊ミネラルスポンジと自動スペクトルLEDを採用しており、どなたでも失敗なく豊かな緑をお楽しみいただけます。`);
+                    addMessage(`🌿 「${query}」についてのご質問ですね！Renzifarm Podは特殊ミネラルスポンジと自動スペクトルLEDを採用しており、どなたでも失敗なく豊かな緑をお楽しみいただけます。`);
                 } else {
-                    addMessage(`🌿 Pertanyaan menarik tentang "${query}"! Verdant Pod menggunakan media hidroponik pasif berspons mineral alami dengan spektrum LED terkontrol. Tanaman herbal Anda dijamin mendapatkan nutrisi seimbang, cukup pastikan tangki air terisi sesuai indikator.`);
+                    addMessage(`🌿 Pertanyaan menarik tentang "${query}"! Renzifarm Pod menggunakan media hidroponik pasif berspons mineral alami dengan spektrum LED terkontrol. Tanaman herbal Anda dijamin mendapatkan nutrisi seimbang, cukup pastikan tangki air terisi sesuai indikator.`);
                 }
             }
         }, 600);
@@ -947,11 +947,11 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
     const closeSocialToast = document.getElementById('closeSocialToast');
 
     const simulatedCustomers = [
-        { name: 'Rian D. dari Bandung', item: 'Pre-order Verdant Pod (Sage Emerald) • 2 mnt lalu' },
+        { name: 'Rian D. dari Bandung', item: 'Pre-order Renzifarm Pod (Sage Emerald) • 2 mnt lalu' },
         { name: 'Nathania S. dari Jakarta Selatan', item: 'Pre-order Paket 3 Seed Pods • 4 mnt lalu' },
-        { name: 'Dr. Hendra dari Surabaya', item: 'Pre-order Verdant Pod (Arctic White) • 6 mnt lalu' },
+        { name: 'Dr. Hendra dari Surabaya', item: 'Pre-order Renzifarm Pod (Arctic White) • 6 mnt lalu' },
         { name: 'Maya P. dari Denpasar, Bali', item: 'Pre-order Pod (Scandinavian Bamboo) • 9 mnt lalu' },
-        { name: 'Bimo K. dari Yogyakarta', item: 'Pre-order Verdant Pod (Midnight Obsidian) • 12 mnt lalu' }
+        { name: 'Bimo K. dari Yogyakarta', item: 'Pre-order Renzifarm Pod (Midnight Obsidian) • 12 mnt lalu' }
     ];
     let toastIndex = 0;
 
@@ -996,9 +996,9 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
             button.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Memproses...';
 
             setTimeout(() => {
-                let orders = JSON.parse(localStorage.getItem('verdant_orders')) || [];
+                let orders = JSON.parse(localStorage.getItem('renzifarm_orders')) || [];
                 const newOrder = {
-                    id: 'VRD-' + Math.floor(1000 + Math.random() * 9000),
+                    id: 'RNZ-' + Math.floor(1000 + Math.random() * 9000),
                     name: 'Newsletter Subscriber',
                     email: emailInput.value,
                     city: 'Indonesia',
@@ -1014,13 +1014,13 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
                     status: 'Pending'
                 };
                 orders.unshift(newOrder);
-                localStorage.setItem('verdant_orders', JSON.stringify(orders));
+                localStorage.setItem('renzifarm_orders', JSON.stringify(orders));
 
                 button.classList.remove('btn-white', 'text-emerald');
                 button.classList.add('btn-success', 'text-white');
                 button.innerHTML = '<i class="bi bi-check2-circle me-1"></i> Berhasil Terdaftar!';
                 
-                alert(`Terima kasih! Email Anda (${emailInput.value}) telah terdaftar untuk voucher diskon 15% Verdant Pod.`);
+                alert(`Terima kasih! Email Anda (${emailInput.value}) telah terdaftar untuk voucher diskon 15% Renzifarm Pod.`);
                 emailInput.value = '';
 
                 setTimeout(() => {
@@ -1072,4 +1072,179 @@ Mohon diproses untuk pengiriman gelombang prioritas pertama. Terima kasih!`;
                 });
             });
         }
+    
+    // =========================================================================
+    // 15. AKADEMI RENZIFARM: INTERACTIVE PLANT CARE TUTORIAL PROTOTYPE
+    // =========================================================================
+
+    // 15a. Tab Switching
+    const careTabs = document.querySelectorAll('.care-tab-pill');
+    const carePanes = {
+        hydration: document.getElementById('careTabHydration'),
+        lighting: document.getElementById('careTabLighting'),
+        pruning: document.getElementById('careTabPruning'),
+        defense: document.getElementById('careTabDefense')
+    };
+
+    careTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            careTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            const tabTarget = this.dataset.tab;
+            Object.keys(carePanes).forEach(key => {
+                if (carePanes[key]) {
+                    if (key === tabTarget) {
+                        carePanes[key].classList.remove('d-none');
+                    } else {
+                        carePanes[key].classList.add('d-none');
+                    }
+                }
+            });
+        });
     });
+
+    // 15b. Nutrient PPM Slider Simulator
+    const nutrientSlider = document.getElementById('nutrientPpmSlider');
+    const nutrientVal = document.getElementById('nutrientPpmValue');
+    const nutrientTitle = document.getElementById('nutrientStatusTitle');
+    const nutrientDesc = document.getElementById('nutrientStatusDesc');
+    const nutrientBox = document.getElementById('nutrientStatusBox');
+
+    if (nutrientSlider) {
+        nutrientSlider.addEventListener('input', function () {
+            const val = parseInt(this.value);
+            if (val < 550) {
+                nutrientVal.textContent = `${val} PPM (Terlalu Rendah / Encer)`;
+                nutrientTitle.textContent = 'Nutrisi Kurang Pekat!';
+                nutrientDesc.textContent = 'Tanaman kekurangan hara makro (N-P-K), daun akan tumbuh kecil dan pucat.';
+                nutrientBox.style.background = 'rgba(234, 179, 8, 0.12)';
+                nutrientBox.style.borderColor = 'rgba(234, 179, 8, 0.3)';
+            } else if (val <= 950) {
+                nutrientVal.textContent = `${val} PPM (Ideal untuk Kemangi & Mint)`;
+                nutrientTitle.textContent = 'Kondisi Nutrisi Sempurna!';
+                nutrientDesc.textContent = 'Mineral seimbang diserap akar secara optimal tanpa risiko daun terbakar pupuk.';
+                nutrientBox.style.background = 'rgba(25, 135, 84, 0.12)';
+                nutrientBox.style.borderColor = 'rgba(25, 135, 84, 0.3)';
+            } else {
+                nutrientVal.textContent = `${val} PPM (Terlalu Pekat / Overfed)`;
+                nutrientTitle.textContent = 'Peringatan: Kelebihan Pupuk!';
+                nutrientDesc.textContent = 'Konsentrasi garam mineral terlalu tinggi dapat menyebabkan ujung daun hangus terbakar.';
+                nutrientBox.style.background = 'rgba(239, 68, 68, 0.12)';
+                nutrientBox.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+            }
+        });
+    }
+
+    // 15c. Telescopic Lamp Height Simulator
+    const btnLampLow = document.getElementById('btnLampLow');
+    const btnLampMid = document.getElementById('btnLampMid');
+    const btnLampHigh = document.getElementById('btnLampHigh');
+    const demoLampBar = document.getElementById('demoLampBar');
+    const lampHeightLabel = document.getElementById('lampHeightLabel');
+
+    if (btnLampLow && btnLampMid && btnLampHigh && demoLampBar) {
+        btnLampLow.addEventListener('click', () => {
+            btnLampLow.classList.add('active');
+            btnLampMid.classList.remove('active');
+            btnLampHigh.classList.remove('active');
+            demoLampBar.style.top = '65px';
+            lampHeightLabel.textContent = 'Ketinggian: 8 cm di atas pot (Fase Tunas Baru - Mencegah Kutilang)';
+        });
+        btnLampMid.addEventListener('click', () => {
+            btnLampLow.classList.remove('active');
+            btnLampMid.classList.add('active');
+            btnLampHigh.classList.remove('active');
+            demoLampBar.style.top = '38px';
+            lampHeightLabel.textContent = 'Ketinggian: 15 cm di atas pot (Fase Remaja / Vegetatif Sedang)';
+        });
+        btnLampHigh.addEventListener('click', () => {
+            btnLampLow.classList.remove('active');
+            btnLampMid.classList.remove('active');
+            btnLampHigh.classList.add('active');
+            demoLampBar.style.top = '10px';
+            lampHeightLabel.textContent = 'Ketinggian: 24 cm di atas pot (Fase Rimbun Dewasa & Berbunga)';
+        });
+    }
+
+    // 15d. Interactive Pruning (Topping) Prototype
+    const btnSimulatePrune = document.getElementById('btnSimulatePrune');
+    const topSingleShoot = document.getElementById('topSingleShoot');
+    const dualBushyBranches = document.getElementById('dualBushyBranches');
+    const pruneBtnLabel = document.getElementById('pruneBtnLabel');
+    const pruneFeedbackText = document.getElementById('pruneFeedbackText');
+    let isPruned = false;
+
+    if (btnSimulatePrune && topSingleShoot && dualBushyBranches) {
+        btnSimulatePrune.addEventListener('click', () => {
+            isPruned = !isPruned;
+            if (isPruned) {
+                topSingleShoot.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                topSingleShoot.style.opacity = '0';
+                topSingleShoot.style.transform = 'translateY(-10px)';
+
+                dualBushyBranches.style.transition = 'opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s';
+                dualBushyBranches.style.opacity = '1';
+                dualBushyBranches.style.transform = 'scale(1) translate(0, 0)';
+
+                pruneBtnLabel.textContent = '🔄 Reset Tanaman Semula';
+                pruneFeedbackText.innerHTML = '<span class="text-success fw-bold">🎉 Sukses Topping!</span> Hormon auksin merangsang 2 cabang baru yang lebat dan rimbun.';
+                btnSimulatePrune.classList.replace('btn-danger', 'btn-outline-secondary');
+            } else {
+                topSingleShoot.style.opacity = '1';
+                topSingleShoot.style.transform = 'translateY(0)';
+
+                dualBushyBranches.style.opacity = '0';
+                dualBushyBranches.style.transform = 'scale(0.8) translate(20, 20)';
+
+                pruneBtnLabel.textContent = 'Gunting Pucuk Sekarang (Topping)';
+                pruneFeedbackText.textContent = 'Status: Batang tunggal belum dipotong. Potong pucuk untuk merangsang 2 cabang baru.';
+                btnSimulatePrune.classList.replace('btn-outline-secondary', 'btn-danger');
+            }
+        });
+    }
+
+    // 15e. Daily / Weekly Care Routine Checklist
+    const careCheckboxes = document.querySelectorAll('.care-task-checkbox');
+    const careProgressText = document.getElementById('careProgressText');
+    const careProgressBar = document.getElementById('careProgressBar');
+    const farmerBadgeBox = document.getElementById('farmerBadgeBox');
+
+    careCheckboxes.forEach(cb => {
+        cb.addEventListener('change', function () {
+            const parent = this.closest('.care-task-item');
+            if (this.checked) {
+                parent.classList.add('completed');
+            } else {
+                parent.classList.remove('completed');
+            }
+
+            const checkedCount = document.querySelectorAll('.care-task-checkbox:checked').length;
+            const total = careCheckboxes.length;
+            const pct = (checkedCount / total) * 100;
+
+            if (careProgressBar) careProgressBar.style.width = `${pct}%`;
+            if (careProgressText) careProgressText.textContent = `${checkedCount} / ${total} Selesai`;
+
+            if (farmerBadgeBox) {
+                if (checkedCount === total) {
+                    farmerBadgeBox.classList.remove('d-none');
+                } else {
+                    farmerBadgeBox.classList.add('d-none');
+                }
+            }
+        });
+    });
+
+    // 15f. Gentle Parallax on Leaf Silhouettes
+    const leafContainer = document.getElementById('leafSilhouetteContainer');
+    if (leafContainer) {
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            leafContainer.style.transform = `translate(${x}px, ${y}px)`;
+            leafContainer.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+    }
+
+});

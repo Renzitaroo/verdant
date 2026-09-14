@@ -1,7 +1,7 @@
 {
-  "name": "verdant",
+  "name": "renzifarm",
   "version": "1.0.0",
-  "description": "Verdant - Smart Indoor Garden & Premium Eco-Living",
+  "description": "RenziFarm - Smart Indoor Garden & Plant Care Academy & Premium Eco-Living",
   "scripts": {
     "dev": "vite --host --port 5173 --open",
     "serve": "vite preview",
